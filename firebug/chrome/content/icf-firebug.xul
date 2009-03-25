@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://icffirebug/skin/icffirebug.css" type="text/css"?> 
+<!DOCTYPE icffirebug SYSTEM "chrome://icffirebug/locale/icffirebug.dtd">
+<overlay id="sample" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+		<script src="icf-firebug.js" />
+		
+		<commandset id="mainCommandSet">
+	        <command id="cmd_icfRunButton" key="icf-run-key" oncommand="Firebug.icfModel.onRun(FirebugContext)"/>
+			<command id="cmd_icfToogleButton" key="icf-toogle-key" oncommand="Firebug.icfModel.onToggle(FirebugContext)"/>
+			<command id="cmd_icfClearButton" key="icf-clear-key" oncommand="Firebug.icfModel.onClear(FirebugContext)"/>
+			<command id="cmd_icfHideButton" key="icf-hide-key" oncommand="Firebug.icfModel.onHide(FirebugContext)"/>
+	    </commandset>
+
+	    <toolbar id="fbToolbar" align="center">
+	        <hbox id="fbToolbarInner" insertbefore="fbDetachButton" flex="1" align="center">
+	            <hbox id="fbicfButtons" insertafter="fbNetButtons">
+	                <toolbarseparator/>
+	                <toolbarbutton id="icfRunButton" label="Run" class="toolbar-text-button" tooltiptext="Run Inline Code Finder" command="cmd_icfRunButton"/>
+					<toolbarbutton id="icfClearButton" label="Toggle" class="toolbar-text-button" tooltiptext="Toogle results" command="cmd_icfToogleButton"/>
+					<toolbarbutton id="icfClearButton" label="Clear" class="toolbar-text-button" tooltiptext="Clear results" command="cmd_icfClearButton"/>
+					<toolbarbutton id="icfHideButton" label="Hide" class="toolbar-text-button" tooltiptext="Hide Firebug" command="cmd_icfHideButton"/>
+	           </hbox>
+	       </hbox>
+	    </toolbar>
+
+</overlay>

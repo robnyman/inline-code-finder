@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+ 
+<prefwindow 
+     title="Inline Code Finder Preferences"
+     xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+ 
+	<prefpane label="Inline Code Finder Preferences">
+		<preferences>
+			<preference id="icf-autorun" name="extensions.icf.autorun" type="bool"/>
+			<preference id="icf-inline-events" name="extensions.icf.inlineEvents" type="bool"/>
+			<preference id="icf-inline-style" name="extensions.icf.inlineStyle" type="bool"/>
+			<preference id="icf-javascript-links" name="extensions.icf.javascriptLinks" type="bool"/>
+			<preference id="icf-highlight-all-events" name="extensions.icf.highlightAllEvents" type="bool"/>
+		</preferences>
+		
+		<groupbox>
+			<caption label="Settings"/>
+			<grid>
+				<columns>
+					<column flex="4"/>
+					<column flex="1"/>
+				</columns>
+				<rows>
+					<row>
+						<label control="autorun" value="Autorun"/>
+						<checkbox id="autorun" preference="icf-autorun"/>
+					</row>
+		
+					<row>	
+						<label control="inline-events" value="Inline events"/>
+						<checkbox id="inline-events" preference="icf-inline-events"/>
+					</row>
+		
+					<row>	
+						<label control="inline-style" value="Inline Styles"/>
+						<checkbox id="inline-style" preference="icf-inline-style"/>
+					</row>
+			
+					<row>	
+						<label control="javascript-links" value="javascript: links"/>
+						<checkbox id="javascript-links" preference="icf-javascript-links"/>
+					</row>
+					
+					<row>	
+						<label control="highlight-events" value="Highlight all events"/>
+						<checkbox id="highlight-events" preference="icf-highlight-all-events"/>
+					</row>
+				</rows>
+			</grid>
+		</groupbox>	
+		
+	</prefpane>
+ 
+</prefwindow>

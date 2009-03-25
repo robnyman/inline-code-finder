@@ -1,0 +1,8 @@
+#icf-button {
+	list-style-image: url("chrome://icf/skin/toolbar-large.png");
+}
+
+#icf-status-bar {
+	width: 30px;
+	margin: 0 5px;
+}

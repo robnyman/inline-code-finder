@@ -1,0 +1,8 @@
+content     icf    chrome/content/
+content     icf    chrome/content/ contentaccessible=yes
+overlay chrome://browser/content/browser.xul chrome://icf/content/icf.xul
+
+locale	icf	en-US	locale/en-US/
+
+skin	icf	classic/1.0	skin/
+style	chrome://global/content/customizeToolbar.xul	chrome://icf/skin/icf.css

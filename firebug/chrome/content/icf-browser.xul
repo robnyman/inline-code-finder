@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://icffirebug/skin/icffirebug.css" type="text/css"?> 
+<!DOCTYPE icffirebug SYSTEM "chrome://icffirebug/locale/icffirebug.dtd">
+<overlay id="sample" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+		
+		<menupopup id="menu_ToolsPopup"> 
+			<menuitem id="run-icffirebug" label="Toogle Inline Code Finder for Firebug" key="icffirebug-run-key" oncommand="Firebug.icfModel.onToggle(FirebugContext)"/> 
+		</menupopup>
+		
+		<keyset>
+			<key id="icffirebug-run-key" modifiers="accel alt shift" key="I" oncommand="Firebug.icfModel.onToggle(FirebugContext)"/>
+		</keyset>
+		
+</overlay>

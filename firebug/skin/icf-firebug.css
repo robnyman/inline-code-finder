@@ -1,0 +1,86 @@
+/* Firebug styles */
+.icf-result-container {
+	width : 350px;
+	/*font : 12px Helvetica, Verdana, Arial, sans-serif;*/
+	min-height: 150px;
+	color : #000;
+	background : #eee;
+	margin: 20px 10px 10px 5%;
+	padding : 10px;
+}
+
+.icf-result-container h1 {
+	background: url(chrome://icffirebug/skin/logo.png) no-repeat;
+	height: 28px;
+	border-bottom: 0;
+	margin: 0;
+	padding: 4px 0 0 40px;
+}
+
+.icf-result-container h2 {
+	margin: 0;
+}
+
+.icf-result-container .instructions {
+	padding: 0 40px 20px;
+}
+
+.icf-result-container .label th, .icf-result-container .label td {
+	padding: 10px 10px 2px 0;
+	border-bottom: 1px solid #000;
+}
+
+.icf-result-container .label th {
+	width: 110px;
+	text-align: left;
+	padding-right: 10px;
+}
+
+.icf-result-container span.javascript-links {
+	padding-right: 5px;
+	border-right: 10px solid magenta;
+}
+
+.icf-result-container span.inline-styles {
+	padding-right: 5px;
+	border-right: 10px solid #0f0;
+}
+
+.icf-result-container span.inline-events {
+ 	padding-right: 5px;
+	border-right: 10px solid red;
+}
+
+.icf-result-container .label td {
+	text-align: right;
+}
+
+.icf-result-container .event-types-container {
+	margin: 15px 10px 0 30px;
+}
+
+.icf-result-container .event-types-container th {
+	width: 100px;
+	text-align: left;
+	cursor: pointer;
+	background: url(chrome://icffirebug/skin/checkbox-unchecked.png) no-repeat left top;
+	padding: 0 10px 0 20px;
+}
+
+.icf-result-container .event-types-container th, .icf-result-container .event-types-container td {
+	vertical-align: top;
+	padding-bottom: 5px;
+}
+
+.icf-result-container .event-types-container td {
+	text-align: right;
+}
+
+.icf-result-container .event-types-container .checked {
+	background-image: url(chrome://icffirebug/skin/checkbox-checked.png);
+}
+
+
+.icf-result-container .icf-display-none {
+	display: none;
+}

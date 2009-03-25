@@ -1,0 +1,8 @@
+content     icffirebug    chrome/content/ xpcnativewrappers=no
+overlay chrome://firebug/content/firebugOverlay.xul chrome://icffirebug/content/icf-firebug.xul
+overlay chrome://browser/content/browser.xul chrome://icffirebug/content/icf-browser.xul
+
+locale	icffirebug	en-US	locale/en-US/
+
+skin	icffirebug	classic/1.0	skin/
+style	chrome://global/content/customizeToolbar.xul	chrome://icffirebug/skin/icf-firebug.css
