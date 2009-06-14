@@ -16,7 +16,7 @@
 	            <hbox id="fbicfButtons" insertafter="fbNetButtons">
 	                <toolbarseparator/>
 	                <toolbarbutton id="icfRunButton" label="Run" class="toolbar-text-button" tooltiptext="Run Inline Code Finder" command="cmd_icfRunButton"/>
-					<toolbarbutton id="icfClearButton" label="Toggle" class="toolbar-text-button" tooltiptext="Toogle results" command="cmd_icfToogleButton"/>
+					<toolbarbutton id="icfToggleButton" label="Toggle" class="toolbar-text-button" tooltiptext="Toogle results" command="cmd_icfToogleButton"/>
 					<toolbarbutton id="icfClearButton" label="Clear" class="toolbar-text-button" tooltiptext="Clear results" command="cmd_icfClearButton"/>
 					<toolbarbutton id="icfHideButton" label="Hide" class="toolbar-text-button" tooltiptext="Hide Firebug" command="cmd_icfHideButton"/>
 	           </hbox>
