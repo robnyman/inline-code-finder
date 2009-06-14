@@ -25,8 +25,8 @@ FBL.ns(function () {
 		Firebug.icfModel = extend(Firebug.Module, {
 		    showPanel: function(browser, panel) {
 				var isPanel = panel && panel.name === panelName;
-				var ojcsButtons = browser.chrome.$("fbicfButtons");
-				collapse(ojcsButtons, !isPanel);
+				var icfButtons = browser.chrome.$("fbicfButtons");
+				collapse(icfButtons, !isPanel);
 		    },
 		
 			addStyleSheet : function (doc) {
@@ -63,7 +63,7 @@ FBL.ns(function () {
 					}
 					inlineEvents += "</table>";
 					var icfScore = ((findJavaScriptLinks)? results.links.items : 0) + ((findInlineStyle)? results.styles.items : 0) + ((findInlineEvents)? results.events.items : 0);
-					var ojcsReport = domplate({
+					var icfReport = domplate({
 						reportListing:
 						DIV({class: "icf-result-container"},
 								H2(
@@ -134,7 +134,7 @@ FBL.ns(function () {
 								)
 					        )
 					});
-					var rootTemplateElement = ojcsReport.reportListing.replace({}, parentNode, ojcsReport);
+					var rootTemplateElement = icfReport.reportListing.replace({}, parentNode, icfReport);
 				}
 				else {
 					this.onClear.call(this, context);
@@ -150,14 +150,12 @@ FBL.ns(function () {
 			},
 		
 			onClear: function (context) {
-				var browser = FirebugChrome.getCurrentBrowser();
-				//browser.chrome.selectPanel(panelName);
-				
+				if (!context) return false;
 		        var panel = context.getPanel(panelName);
 			    var parentNode = panel.panelNode;
 				icffirebug.clearAll();
 				icffirebug.clearState();
-				var ojcsReport = domplate({
+				var icfReport = domplate({
 					reportListing :
 						DIV({class: "icf-result-container"},
 							H1({}, "Inline Code Finder for Firebug"),
@@ -167,7 +165,7 @@ FBL.ns(function () {
 							)
 						)	
 				});
-				var rootTemplateElement = ojcsReport.reportListing.replace({}, parentNode, "");
+				var rootTemplateElement = icfReport.reportListing.replace({}, parentNode, "");
 		    },
 		
 			onHide: function (context) {
@@ -452,8 +450,6 @@ var icffirebug = function () {
 					}
 				}
 			}
-			
-			//alert(javascriptLinks.items);
 			
 			report = content.document.createElement("div");
 			report.id = "icffirebug-report";
