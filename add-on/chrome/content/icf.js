@@ -21,7 +21,7 @@ var icf = function () {
 			}
 		},
 		styles = [
-			"position : fixed",
+			"position : absolute",
 			"display : none",
 			"min-width : 300px",
 			"font : 12px Helvetica, Verdana, Arial, sans-serif",
