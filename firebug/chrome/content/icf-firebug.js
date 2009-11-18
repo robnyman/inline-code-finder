@@ -39,7 +39,12 @@ FBL.ns(function () {
 			},
 
 		   	onRun: function (context, results) {
-		        var panel = context.getPanel(panelName),
+				if (results && !results.autorun) {
+					// Forces Firebug to be shown, even if it's off
+					Firebug.toggleBar(true);
+					Firebug.toggleBar(true, panelName);
+				}
+		        var panel = FirebugContext.getPanel(panelName),
 					parentNode = panel.panelNode,
 					results = results || icffirebug.run(),
 					findInlineEvents = Firebug.getPref(Firebug.prefDomain, "icffirebug.inlineEvents"),
@@ -52,7 +57,6 @@ FBL.ns(function () {
 					if (!results.autorun) {
 						var browser = FirebugChrome.getCurrentBrowser();
 						browser.chrome.selectPanel(panelName);
-						Firebug.toggleBar(true, panelName);
 					}
 					
 					var inlineEvents = "<table cellspacing='0'>";
@@ -150,8 +154,8 @@ FBL.ns(function () {
 			},
 		
 			onClear: function (context) {
-				if (!context) return false;
-		        var panel = context.getPanel(panelName);
+				if (!FirebugContext) return false;
+		        var panel = FirebugContext.getPanel(panelName);
 			    var parentNode = panel.panelNode;
 				icffirebug.clearAll();
 				icffirebug.clearState();

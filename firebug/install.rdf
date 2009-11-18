@@ -5,7 +5,7 @@
   <RDF:Description RDF:about="urn:mozilla:install-manifest"
                    em:id="icffirebug@robertnyman.com"
                    em:name="Inline Code Finder for Firebug"
-                   em:version="0.94"
+                   em:version="1.0"
                    em:creator="Robert Nyman"
                    em:description="Finds HTML elements with inline JavaScripts events, inline styling and javascript: links"
                    em:homepageURL="http://robertnyman.com/inline-code-finder">
@@ -14,5 +14,5 @@
   <RDF:Description RDF:about="rdf:#$NXdse3"
                    em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
                    em:minVersion="2.0"
-                   em:maxVersion="3.5.*" />
+                   em:maxVersion="3.6.*" />
 </RDF:RDF>

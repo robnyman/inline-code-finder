@@ -1,4 +1,4 @@
-content     icffirebug    chrome/content/ xpcnativewrappers=no
+content     icffirebug    chrome/content/
 overlay chrome://firebug/content/firebugOverlay.xul chrome://icffirebug/content/icf-firebug.xul
 overlay chrome://browser/content/browser.xul chrome://icffirebug/content/icf-browser.xul
 
