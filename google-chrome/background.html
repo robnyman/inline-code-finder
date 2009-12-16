@@ -1,0 +1,15 @@
+<html>
+	<script>
+		chrome.extension.onRequest.addListener(
+			function(request, sender, sendResponse) {
+				if (request.item == "autorun") {
+					sendResponse({
+						value: localStorage["autorun"]
+					});
+				}
+				else {
+					sendResponse({});
+				}
+			});
+	</script>
+</html>

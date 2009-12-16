@@ -1,0 +1,26 @@
+{
+	"name": "Inline Code Finder",
+	"version": "1.0",
+	"description": "Finds HTML elements with inline JavaScripts events, inline styling and javascript: links",
+	"permissions" : [
+		"tabs"
+	],
+	"browser_action": {
+		"default_icon": "images/icon.png",
+		"popup" : "popup.html"
+	},
+	"icons": {
+		"16": "images/icon.png",
+		"32": "images/icon.png",
+		"64": "images/icon.png",
+		"128": "images/icon.png"
+	},
+	"background_page" : "background.html",
+	"options_page" : "options.html",
+	"content_scripts": [
+		{
+			"matches": ["http://*/*"],
+			"js": ["js/icf.js"]
+		}
+	]
+}
