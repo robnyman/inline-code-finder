@@ -25,15 +25,26 @@
 				localStorage["autorun"] = this.checked;
 			};
 		};
+		
+		function sendAction (action) {
+			chrome.extension.getBackgroundPage().sendAction(action);
+		}
 	</script>
 	
 	<body>
 		
 		<div id="container">
+			
+			<p>
+				<button onclick="sendAction('run')">Run</button>
+				<button onclick="sendAction('clear')">Clear</button>
+			</p>
+			
 			<p>
 				<input type="checkbox" id="autorun" checked="checked">
 				<label for="autorun">Autorun</label>
 			</p>
+			
 		</div>
 		
 	</body>

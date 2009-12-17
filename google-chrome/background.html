@@ -1,15 +1,56 @@
 <html>
 	<script>
 		chrome.extension.onRequest.addListener(
-			function(request, sender, sendResponse) {
+			function (request, sender, sendResponse) {
 				if (request.item == "autorun") {
 					sendResponse({
 						value: localStorage["autorun"]
 					});
 				}
+				else if (request.item === "setIcon") {
+					chrome.browserAction.setIcon(
+						{
+							path: "images/icon" + ((request.hasRun)? "-active" : "") + ".png"
+						}
+					);
+				}
 				else {
 					sendResponse({});
 				}
+			}
+		);
+			
+		function sendAction (action) {
+			chrome.tabs.getSelected(null, function (tab) {
+				chrome.tabs.sendRequest(
+					tab.id, 
+					{
+						action: action
+					}
+				);
 			});
-	</script>
+		}
+		
+		chrome.browserAction.onClicked.addListener(function (tab) {
+			sendAction("toggle");
+		});
+		
+		chrome.tabs.onSelectionChanged.addListener(function (tabId, selectInfo) {
+			chrome.tabs.getSelected(null, function (tab) {
+				chrome.tabs.sendRequest(
+					tab.id, 
+					{
+						action: "getStatus"
+					},
+					function (response) {
+						chrome.browserAction.setIcon(
+							{
+								path: "images/icon" + ((response.hasRun)? "-active" : "") + ".png"
+							}
+						);
+					}
+				);
+			});
+		});
+	</script>	
 </html>
