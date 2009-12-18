@@ -1,6 +1,6 @@
 {
 	"name": "Inline Code Finder",
-	"version": "0.9",
+	"version": "0.9.2",
 	"description": "Finds HTML elements with inline JavaScripts events, inline styling and javascript: links",
 	"permissions" : [
 		"tabs"

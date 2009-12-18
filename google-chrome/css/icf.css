@@ -65,12 +65,12 @@ div.icf-overlay .event-types-container th {
 	width: 100px;
 	text-align: left;
 	cursor: pointer;
-	background: url(chrome-extension://jcjffbnchmpncdbakknlkjipkifpmebb/images/checkbox-unchecked.png) no-repeat left top !important;
+	background: url(chrome-extension://lfllandeffkmadbndfckhdbkekdfahom/images/checkbox-unchecked.png) no-repeat left top !important;
 	padding: 0 10px 0 20px;
 }
 
 div.icf-overlay .event-types-container th.checked {
-	background: url(chrome-extension://jcjffbnchmpncdbakknlkjipkifpmebb/images/checkbox-checked.png) no-repeat left top !important;
+	background: url(chrome-extension://lfllandeffkmadbndfckhdbkekdfahom/images/checkbox-checked.png) no-repeat left top !important;
 }
 
 div.icf-overlay-report td, 

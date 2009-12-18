@@ -65,7 +65,7 @@ var icf = function () {
 		
 		init = function () {
 			clearAll();
-			var autoRun = true;
+			var autoRun = false;
 			chrome.extension.sendRequest({
 					item : "setIcon",
 					hasRun : hasRun
