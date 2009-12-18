@@ -1,0 +1,41 @@
+<html>
+	<title>Flickr Gallery Plus options</title>
+	<style>
+		#container {
+			width: 500px;
+			margin: 0 auto;
+		}
+	
+		body {
+			font: 13px Arial, sans-serif;
+		}
+		
+		label {
+			font-weight: bold;
+		}
+	</style>
+	<script>
+		window.onload = function () {
+			var autorun = document.getElementById("autorun");
+			if (typeof localStorage["autorun"] !== "undefined") {
+				autorun.checked = (localStorage["autorun"] === "true");
+			}
+			
+			autorun.onclick = function (evt) {
+				localStorage["autorun"] = this.checked;
+			};
+		};
+	</script>
+	
+	<body>
+		
+		<div id="container">
+			<h1>Flickr Gallery Plus options</h1>
+			<p>
+				<input type="checkbox" id="autorun" checked="checked">
+				<label for="autorun">Autorun</label>
+			</p>
+		</div>
+		
+	</body>
+</html>

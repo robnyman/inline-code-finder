@@ -261,14 +261,14 @@ var icf = function () {
 		
 		positionAndShow = function (evt) {
 			viewer.hide();
-			var viewerWidth = viewer.width(),
+			var viewerWidth = viewer.outerWidth(),
 				xPos = (evt.clientX + 10 + window.pageXOffset),
 				yPos = (evt.clientY + 10 + window.pageYOffset),
 				bodyWidth = document.body.offsetWidth,
 				rightMargin = xPos + viewerWidth;
 			
 			if (rightMargin > bodyWidth) {
-				xPos = bodyWidth - viewerWidth;
+				xPos = (bodyWidth - viewerWidth) + window.pageXOffset;
 			}
 			
 			viewer.css({

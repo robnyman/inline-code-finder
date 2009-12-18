@@ -3,7 +3,7 @@ div#icf-viewer {
 }
 
 div.icf-overlay {
-	position : fixed;
+	position : absolute;
 	display : none;
 	font : 12px Helvetica, Verdana, Arial, sans-serif;
 	color : #fff !important;
@@ -17,6 +17,7 @@ div.icf-overlay {
 }
 
 div.icf-overlay-report {
+	position: fixed;
 	display : block;
 	width : 300px;
 	left : 0;

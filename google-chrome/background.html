@@ -8,17 +8,25 @@
 					});
 				}
 				else if (request.item === "setIcon") {
-					chrome.browserAction.setIcon(
-						{
-							path: "images/icon" + ((request.hasRun)? "-active" : "") + ".png"
-						}
-					);
+					setIcon (request.hasRun);
 				}
 				else {
 					sendResponse({});
 				}
 			}
 		);
+		
+		function setIcon (hasRun) {
+			var icfText = "Inline Code Finder";
+			chrome.browserAction.setIcon(
+				{
+					path: "images/icon-" + ((hasRun)? "active-" : "") + "16.png"
+				}
+			);
+			chrome.browserAction.setTitle({
+				"title" : ((hasRun)? "Clear " + icfText + " results" : "Run " + icfText)
+			});
+		}
 			
 		function sendAction (action) {
 			chrome.tabs.getSelected(null, function (tab) {
@@ -43,11 +51,7 @@
 						action: "getStatus"
 					},
 					function (response) {
-						chrome.browserAction.setIcon(
-							{
-								path: "images/icon" + ((response.hasRun)? "-active" : "") + ".png"
-							}
-						);
+						setIcon (response.hasRun)
 					}
 				);
 			});
