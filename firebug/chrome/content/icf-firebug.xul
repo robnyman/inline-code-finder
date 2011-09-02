@@ -5,10 +5,10 @@
 		<script src="icf-firebug.js" />
 		
 		<commandset id="mainCommandSet">
-	        <command id="cmd_icfRunButton" key="icf-run-key" oncommand="Firebug.icfModel.onRun(FirebugContext)"/>
-			<command id="cmd_icfToogleButton" key="icf-toogle-key" oncommand="Firebug.icfModel.onToggle(FirebugContext)"/>
-			<command id="cmd_icfClearButton" key="icf-clear-key" oncommand="Firebug.icfModel.onClear(FirebugContext)"/>
-			<command id="cmd_icfHideButton" key="icf-hide-key" oncommand="Firebug.icfModel.onHide(FirebugContext)"/>
+	        <command id="cmd_icfRunButton" key="icf-run-key" oncommand="Firebug.icfModel.onRun(Firebug.currentContext)"/>
+			<command id="cmd_icfToogleButton" key="icf-toogle-key" oncommand="Firebug.icfModel.onToggle(Firebug.currentContext)"/>
+			<command id="cmd_icfClearButton" key="icf-clear-key" oncommand="Firebug.icfModel.onClear(Firebug.currentContext)"/>
+			<command id="cmd_icfHideButton" key="icf-hide-key" oncommand="Firebug.icfModel.onHide(Firebug.currentContext)"/>
 	    </commandset>
 
 	    <toolbar id="fbToolbar" align="center">

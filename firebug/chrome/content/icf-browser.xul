@@ -4,11 +4,11 @@
 <overlay id="sample" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 		
 		<menupopup id="menu_ToolsPopup"> 
-			<menuitem id="run-icffirebug" label="Toogle Inline Code Finder for Firebug" key="icffirebug-run-key" oncommand="Firebug.icfModel.onToggle(FirebugContext)"/> 
+			<menuitem id="run-icffirebug" label="Toogle Inline Code Finder for Firebug" key="icffirebug-run-key" oncommand="Firebug.icfModel.onToggle(Firebug.currentContext)"/> 
 		</menupopup>
 		
 		<keyset>
-			<key id="icffirebug-run-key" modifiers="accel alt shift" key="I" oncommand="Firebug.icfModel.onToggle(FirebugContext)"/>
+			<key id="icffirebug-run-key" modifiers="accel alt shift" key="I" oncommand="Firebug.icfModel.onToggle(Firebug.currentContext)"/>
 		</keyset>
 		
 </overlay>

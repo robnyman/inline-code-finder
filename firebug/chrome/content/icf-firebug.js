@@ -44,7 +44,7 @@ FBL.ns(function () {
 					Firebug.toggleBar(true);
 					Firebug.toggleBar(true, panelName);
 				}
-		        var panel = FirebugContext.getPanel(panelName),
+		        var panel = Firebug.currentContext.getPanel(panelName),
 					parentNode = panel.panelNode,
 					results = results || icffirebug.run(),
 					findInlineEvents = Firebug.getPref(Firebug.prefDomain, "icffirebug.inlineEvents"),
@@ -55,7 +55,7 @@ FBL.ns(function () {
 				
 				if (results && (results.events || results.styles || results.links)) {
 					if (!results.autorun) {
-						var browser = FirebugChrome.getCurrentBrowser();
+						var browser = Firebug.chrome.getCurrentBrowser();
 						browser.chrome.selectPanel(panelName);
 					}
 					
@@ -154,8 +154,8 @@ FBL.ns(function () {
 			},
 		
 			onClear: function (context) {
-				if (!FirebugContext) return false;
-		        var panel = FirebugContext.getPanel(panelName);
+				if (!Firebug.currentContext) return false;
+		        var panel = Firebug.currentContext.getPanel(panelName);
 			    var parentNode = panel.panelNode;
 				icffirebug.clearAll();
 				icffirebug.clearState();
